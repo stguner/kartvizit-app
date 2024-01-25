@@ -1,0 +1,27 @@
+<div class="card-body w-100" (click)="openUpdateCardModal(cardItem)">
+    <p class="card-text">{{cardItem.name}}</p>
+    <h5 class="card-title">{{cardItem.title}}</h5>
+    <p class="card-text">{{cardItem.phone}}</p>
+    <p class="card-text" *ngIf="cardItem.email; else noEmail" >{{cardItem.email}}</p>
+    <ng-template #noEmail>
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <i class="material-icons">email</i>
+            </div>
+            <div class="col-12 col-md-9">
+                <span class="text-warning">email yok</span>
+            </div>
+        </div>
+    </ng-template>
+    <p class="card-text" *ngIf="cardItem.address; else noAddress">{{cardItem.address}}</p>
+    <ng-template #noAddress>
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <i class="material-icons">Address</i>
+            </div>
+            <div class="col-12 col-md-9 justify-content-start">
+                <span class="text-warning">Adres Yok</span>
+            </div>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,25 @@
+<main>
+    <div class="page-content">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <h1 class="page-title">Kartvizitler</h1>
+                <h4 class="page-description">Bu ekranda kartvizitler görünecek</h4>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="d-flex justify-content-end align-items-center text-center">
+                    <button mat-raised-button color="primary" (click)="openCardModal()" >Yeni Kartvizit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+<div class="cards">
+    <div class="row">
+        <div class="col-12 col-md-4 d-flex border-box" *ngFor="let card of cards">
+            <app-card-item [cardItem]="card"></app-card-item>
+        </div>
+    </div>
+  </div>
+    
+</main>
+

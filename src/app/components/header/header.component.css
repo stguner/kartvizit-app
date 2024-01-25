@@ -1,0 +1,23 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.header-menu {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+}
+
+.header-menu li a{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header-menu li a:hover{
+    color: #000;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.7;
+}
